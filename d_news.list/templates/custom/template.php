@@ -10,9 +10,13 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
+
+use Bitrix\Main\Page\Asset;
+Asset::getInstance()->addCss("/local/components/d_news.detail/templates/custom/css/common.css");
+
 $this->setFrameMode(true);
 global $APPLICATION;
-$APPLICATION->SetAdditionalCss("/local/components/d_news.list/css/common.css");
+
 ?>
 
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
